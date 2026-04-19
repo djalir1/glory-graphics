@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Palette, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -19,9 +19,17 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold text-primary">
-          <Palette className="w-7 h-7" />
-          Glory Graphics
+        <Link to="/" className="flex items-center gap-3 font-display text-xl font-bold text-primary">
+          {/* FIXED LOGO: 
+              - Removed rounded-full so the rectangle logo shows
+              - Increased height to h-10 and set width to auto so it doesn't squash
+          */}
+          <img 
+            src="/logo.jpeg" 
+            alt="Glory Graphics Logo" 
+            className="h-10 w-auto object-contain" 
+          />
+          <span className="hidden sm:inline-block">Glory Graphics</span>
         </Link>
 
         {/* Desktop */}
