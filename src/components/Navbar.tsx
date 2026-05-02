@@ -29,7 +29,7 @@ const Navbar = () => {
             alt="Glory Graphics Logo" 
             className="h-10 w-auto object-contain" 
           />
-          <span className="hidden sm:inline-block">Glory Graphics</span>
+          <span className="hidden sm:inline-block"></span>
         </Link>
 
         {/* Desktop */}
